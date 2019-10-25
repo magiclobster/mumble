@@ -1,0 +1,13 @@
+version: '2'
+services:
+  mumble:
+    build: .
+    container_name: "mumble"
+    volumes:
+      - mumble-data:/mumble
+    ports:
+      - 64738:64738
+      - 64738:64738/udp
+
+volumes:
+  mumble-data: {}
